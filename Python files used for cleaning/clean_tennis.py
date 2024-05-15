@@ -6,7 +6,7 @@ words_list = ["IGA", "ARYNA", "COCO", "ELENA", "JESSICA", "ONS", "QINWEN", "MARK
 words_list = [word.lower() for word in words_list]
 
 
-download_file_path = r"C:\Users\rgvil\Downloads\srf_data_with_gender.csv"
+download_file_path = r"C:\Users\rgvil\Downloads\bina\srf_data_with_gender.csv"
 # Load the CSV file into a DataFrame
 df = pd.read_csv(download_file_path)
 
@@ -23,8 +23,8 @@ def check_words(untertitel):
 df.loc[df['Sportart'] == 'Tennis', 'Geschlecht'] = df[df['Sportart'] == 'Tennis']['Untertitel'].apply(check_words)
 
 # Save the modified DataFrame back to a new CSV file
-download_file_path = r"C:\Users\rgvil\Downloads\srf_data_with_gender_tennis_cleaned.csv"
-df.to_csv(download_file_path, index=False)
+download_file_path = r"C:\Users\rgvil\Downloads\bina\srf_data_with_gender_tennis_cleaned.csv"
+df.to_csv(download_file_path, index=False, encoding='utf-8-sig')
 
 
 
